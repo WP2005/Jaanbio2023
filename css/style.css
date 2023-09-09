@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  color: white;
+  background-color: white;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: rgb(32, 48, 48);
+  padding: 10px;
+  font-size: 14px;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+header .container {
+  display: flex;
+}
+
+.leftPanel {
+  height: 100svh;
+  width: 50%;
+  position: relative;
+}
+
+.leftPanel::after {
+  background-image: url("images/healthcare tiles.jpg");
+}
+
+.leftPanel .topSection {
+  margin: 20px;
+}
+.leftPanel .topSection .logo {
+  width: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.leftPanel .bottomSection {
+  margin-top: 170px;
+  margin-right: 50px;
+  color: black;
+}
+
+.leftPanel .bottomSection img {
+  display: block;
+  width: 90%;
+  padding: 0;
+  margin: 0px;
+  margin-bottom: 50px;
+}
+
+.rightPanel {
+  background-color: rgb(60, 55, 75);
+  height: 100sv;
+  width: 100%;
+}
+
+.rightPanel .topSection {
+  background-color: grey;
+  margin: 20px;
+}
+
+.rightPanel .bottomSection {
+  margin: 280px 70px 50px 70px;
+}
+
+.crossbar {
+  position: relative;
+  background-color: rgb(71, 118, 113);
+  margin-left: -2200px;
+  margin-top: 130px;
+  height: 130px;
+  padding: 20px 20px 20px 370px;
+  width: 100%;
+  border-radius: 0 50px 50px 0;
+}
+
+.crossbar h1 {
+  font-size: 35px;
+}
+
+.crossbar h2 {
+  font-size: 20px;
+}

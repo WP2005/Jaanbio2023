@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Gradient Background with Overlayed Image</title>
+    <style>
+      .low-opacity-bg-image {
+        width: 100%;
+
+        display: grid;
+        place-content: center;
+        text-align: center;
+        min-height: 500px;
+        position: relative;
+        isolation: isolate;
+        background: white;
+      }
+      .low-opacity-bg-image::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        inset: 0; /* shorthand top-right-bottom-left*/
+        opacity: 0.3;
+        background-image: url("https://yanktonmedical.flywheelsites.com/wp-content/uploads/2019/04/Yankton-Medical_Laboratory.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="low-opacity-bg-image">
+      <h1>Background image opacity?</h1>
+      <p>it's possible</p>
+    </div>
+  </body>
+</html>

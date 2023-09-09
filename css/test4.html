@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <style>
+      .cross {
+        position: absolute;
+        background-color: gray;
+        width: 100px;
+        height: 100px;
+        right: 50px;
+        bottom: 50px;
+      }
+
+      .cross:after,
+      .cross:before {
+        content: "";
+        position: absolute;
+        width: 3em;
+        height: 0.2em;
+        background-color: red;
+        transform: rotate(45deg);
+        display: block;
+        top: 50px;
+        left: 20px;
+      }
+      .cross:before {
+        transform: rotate(-45deg);
+        background-color: greenyellow;
+      }
+
+      .x {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cross"></div>
+    <div class="x">X</div>
+  </body>
+</html>
