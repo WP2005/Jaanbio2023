@@ -137,54 +137,8 @@ nav li {
 .about .rightPanel {
   background-color: blue;
 }
-
-/******* ACCORDIAN *******/
-.accordianPanel {
-  color: white;
-}
-.hiddenContent {
+.about .modal-state {
   display: none;
-  margin-top: 1em;
-}
-
-input[type="checkbox"] {
-  height: 2em;
-  display: block;
-  appearance: none;
-}
-
-.accordianPanel label {
-  position: relative;
-  padding: 1em;
-  background-color: rgb(155, 22, 117);
-  color: white;
-  cursor: pointer;
-}
-
-/***** Left accordian section *****/
-.leftPanel .accordianPanel label:before {
-  content: "Read More...";
-}
-.leftPanel .accordianPanel input[type="checkbox"]:checked ~ label:before {
-  content: "Read Less";
-}
-.leftPanel
-  .accordianPanel
-  .hiddenContent:has(~ input[type="checkbox"]:checked) {
-  display: block;
-}
-
-/***** Right accordian section *****/
-.rightPanel .accordianPanel label:before {
-  content: "Read More";
-}
-.rightPanel .accordianPanel input[type="checkbox"]:checked ~ label:before {
-  content: "Read Less";
-}
-.rightPanel
-  .accordianPanel
-  .hiddenContent:has(~ input[type="checkbox"]:checked) {
-  display: block;
 }
 
 /***** Modal *****/
@@ -212,7 +166,12 @@ input[type="checkbox"] {
   border-radius: 10px;
   transition: top 0.25s ease;
 }
-.modal-state:checked + .modal {
+.theProblem .modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease;
+}
+.theSolution .modal-state:checked + .modal {
   opacity: 1;
   visibility: visible;
   transition: opacity 1s ease;
@@ -250,19 +209,20 @@ input[type="checkbox"] {
 .topicExcerpt {
   position: relative;
 }
-.topicExcerpt.theProblem .read-more {
-  padding: 0.5em 0.5em 0.5em 0.5em;
+.topicExcerpt .read-more {
+  padding: 0.5em;
   margin-top: 1em;
   width: fit-content;
-  color: white;
   cursor: pointer;
+  display: block;
+  margin-top: 1em;
 }
-.topicExcerpt.theProblem .read-more:hover {
-  background-color: #ae2891;
+.topicExcerpt .read-more:hover {
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
 
-.topicExcerpt.theProblem .modal img {
+.topicExcerpt .modal img {
   margin-top: 2em;
   display: block;
 }
