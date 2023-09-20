@@ -79,13 +79,13 @@
               <div class="topicExcerpt theProblem">
                 <h2>The Problem</h2> 
                 Ischemic heart disease (IHD) is the single largest cause of death worldwide. In the United States of America alone, there are over 1,000,000 heart attacks every year<sup>*1</sup>  
-                <label for="modal-problem" class="read-more">Read more</label>
-                <input type="checkbox" id="modal-problem" class="modal-state">
+                <label for="modalCB-problem" class="read-more">Read more</label>
+                <input type="checkbox" id="modalCB-problem" class="modal-state">
                 <div class="modal">
-                  <label for="modal-problem" class="modal-bg"><!-- click bg to close modal --></label>
+                  <label for="modalCB-problem" class="modal-bg"><!-- click bg to close modal --></label>
                   <div class="modal-inner">
                     <div class="modal-header"> 
-                      <label class="modal-close bottom" for="modal-problem"><i class="fa fa-window-close-o fa-1x" aria-hidden="true"></i> Close</label>
+                      <label class="modal-close" for="modalCB-problem"><i class="fa fa-window-close-o fa-1x" aria-hidden="true"></i> Close</label>
                       <hr>
                     </div>
                     <h2>The Problem</h2>
@@ -95,7 +95,7 @@
                     <img src="http://jaanbio.com/wp-content/uploads/2023/03/Five-Novel-Chart.png" width="500px" alt="">
                     <div class="modal-footer"> 
                       <hr>
-                      <label class="modal-close bottom" for="modal-problem"><i class="fa fa-window-close-o fa-1x" aria-hidden="true"></i> Close</label>
+                      <label class="modal-close" for="modalCB-problem"><i class="fa fa-window-close-o fa-1x" aria-hidden="true"></i> Close</label>
                     </div> <!-- end modal-footer -->
                   </div> <!-- end modal-inner -->
                 </div> <!-- end modal -->
@@ -110,13 +110,13 @@
               <div class="topicExcerpt theSolution">
                 <h2>Our Solution</h2> 
                 Establishment of a therapy that promotes endogenous cardiac myocyte regeneration in the ischemic heart to reduce infarct size offers a potential treatment of IHD, reducing morbidity and mortality. 
-                <label for="modal-solution" class="read-more">Read more</label>
-                <input type="checkbox" id="modal-solution" class="modal-state">
+                <label for="modalCB-solution" class="read-more">Read more</label>
+                <input type="checkbox" id="modalCB-solution" class="modal-state">
                 <div class="modal">
-                  <label for="modal-solution" class="modal-bg"><!-- click bg to close modal --></label>
+                  <label for="modalCB-solution" class="modal-bg"><!-- click bg to close modal --></label>
                   <div class="modal-inner">
                     <div class="modal-header"> 
-                      <label class="modal-close bottom" for="modal-solution"><i class="fa fa-window-close-o fa-1x" aria-hidden="true"></i> Close</label>
+                      <label class="modal-close bottom" for="modalCB-solution"><i class="fa fa-window-close-o fa-1x" aria-hidden="true"></i> Close</label>
                       <hr>
                     </div>
                     <h2>The Solution</h2>
@@ -127,7 +127,7 @@
                     In addition we have developed another viral delivered microRNA activator, JN-210, that is being developed for the treatment of hypertrophic cardiomyopathy, the single largest cause of sudden cardiac death in young adults5.
                     <div class="modal-footer"> 
                       <hr>
-                      <label class="modal-close bottom" for="modal-solution"><i class="fa fa-window-close-o fa-1x" aria-hidden="true"></i> Close</label>
+                      <label class="modal-close" for="modalCB-solution"><i class="fa fa-window-close-o fa-1x" aria-hidden="true"></i> Close</label>
                     </div> <!-- end modal-footer -->
                   </div> <!-- end modal-inner -->
                 </div> <!-- end modal -->
@@ -137,39 +137,350 @@
         </div> <!-- end rightPanel -->
       </section>
 
-      <!--- 
+  
       <section class="team">
-        <div class="container">
 
-          <----- Team Bio Card --------
-          <div class="card-container">
-            <img class="photo" src="/images/Brar2.jpg" alt="user" />
+        <div class="container">
+          <!----- Bio Card 1 ------->
+          <div class="bioCard bio1"> 
+            <label for="modalCB-bio1" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Brar2.jpg" alt="" />
             <h3>Bhawanjit Brar</h3>
             <h6> Ph.D.</h6>
             <p>Co-Founder and <br/>Chief Executive Officer</p>
-            <label for="modal-1"><div class="read-more">Read more..</div></label>
-          </div>
-          <input type="checkbox" id="modal-1" class="modal-state" />
-          <-- Bio modal detail info --
-          <div class="modal">
-            <label for="modal-1" class="modal-bg"></label>
-            <div class="modal-inner">
-              <h2>Caaaats FTW!</h2>
-              <p><img src="https://i.imgur.com/HnrkBwB.gif" alt="" />test in sagittis nulla. Curabitur euismod diam eget risus venenatis, sed dictum lectus bibendum. Nunc nunc nisi, hendrerit eget nisi id, rhoncus rutrum velit. Nunc vel mauris dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam fringilla quis nisi eget imperdiet.</p>
-              <label class="modal-close" for="modal-1">Close</label>
-              <label class="modal-close-x" for="modal-1"></label>
-            </div>
-          </div>
-          <----- END: Team Bio Card --------
+            <label for="modalCB-bio1"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio1" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio1" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio1">Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Brar2.jpg" alt="" />
+                <h2>Bhawanjit Brar</h2>
+                <h6> Ph.D.</h6>
+                <p>
+                  Dr. Brar founded Jaan Biotherapeutics in 2015, following 7 years at Zensun USA, where she held various positions including the Vice President of Clinical Research, managing a United States Phase 2 clinical trial for a first in class therapeutic for the treatment of heart failure. Dr. Brar completed her undergraduate degree in Biochemistry from Swansea University in Wales and a Ph.D. in Physiology/Endocrinology from the University of Reading U.K. Dr. Brar has served as a consultant for many years helping companies to develop therapeutics through to clinical testing before founding Jaan Biotherapeutics. Dr. Brar is an inventor/co-inventor of numerous patents. In her spare time Dr. Brar like to spend time with her teenage daughters, walking her rescue American Staffordshire Terrier, cooking and running. She serves on the Board of Directors of her community as well as a member of the Women in Biosciences Founders Forum Group.
+                </p>
+  
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio1  -------->
 
-        </div>      
+          <!----- Bio Card 2 ------->
+          <div class="bioCard bio2"> 
+            <label for="modalCB-bio2" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Kirk Peterson.jpg" alt="" />
+            <h3>Kirk L. Peterson</h3>
+            <h6>M.D., F.A.C.P., F.A.C.C.</h6>
+            <p>Professor of Medicine, Division of Cardiovascular Medicine, Director Emeritus, Sulpizio Cardiovascular Center, Director, Seaweed Canyon Physiology Laboratory</p>
+            <label for="modalCB-bio2"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio2" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio2" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio2"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Kirk Peterson.jpg" alt="" />
+                <h2>Kirk L. Peterson</h2>
+                <h6>M.D., F.A.C.P., F.A.C.C.</h6>
+                <p>
+                  Kirk L. Peterson, MD, FACP, FACC, is a Professor of Medicine Emeritus at the University of California San Diego (UCSD) School of Medicine where he held the Perlman Chair of Cardiology for more than 25 years. During his 50-year professional career at UCSD, he also served as a cardiology consultant to the Naval Regional Medical Center and the Veteran’s Hospital in San Diego. He served as the Director of the Sulpizio Cardiovascular Center, UC San Diego Health System, from its opening in 2011 until 2015. During his academic career he sat on the editorial board of the Journal American College of Cardiology and was also President of the Medical Education Research Foundation. Between 2005 and 2020, Professor Peterson served as the Director of the Seaweed Canyon Cardiovascular Physiology Laboratory, University of California at San Diego School of Medicine, the site where the murine investigations of Jaan Biotherapeutics drugs were conducted in double-blind studies. He has authored over 180 papers in cardiology, numerous book chapters, and served as the senior author of a text book on Cardiac Catheterization and Angiography. Professor Peterson received his medical degree from the Cornell University Medical College in New York, New York,completed two years of post-graduate training in Internal Medicine at The New York Hospital-Cornell Medical Center, and received fellowship training in Cardiovascular Medicine at The Baylor College of Medicine before coming to UC San Diego.
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio2  -------->
+
+          <!----- Bio Card 3 ------->
+          <div class="bioCard bio3"> 
+            <label for="modalCB-bio3" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Joseph Hansen.jpg" alt="" />
+            <h3>Joseph Hansen</h3>
+            <h6>Advisor</h6>
+            <p>
+              Joseph Hansen, CPA/Attorney, is Chief Financial Officer of JaanBiotherapeutics LLC and a member of the City of Oceanside Citizen Oversight Investment Committee. 
+            </p>
+            <label for="modalCB-bio3"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio3" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio3" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio3"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Joseph Hansen.jpg" alt="" />
+                <h2>Joseph Hansen</h2>
+                <h6>Advisor</h6>
+                <p>
+                  Joseph Hansen, CPA/Attorney, is Chief Financial Officer of JaanBiotherapeutics LLC and a member of the City of Oceanside Citizen Oversight Investment Committee. He formerly was CFO for a number of public and private companies including Zensun Science and Technology Co., Ltd Shanghai, PRC, Pacific Ethanol, Inc. (Nasdaq), National RV Holdings, Inc. (formerly NYSE), Zacky Foods/Farms Companies, Avis Enterprises/Intervest (holding companies of Warren Avis, Avis Rent a Car founder), among others. He is co-founder of 4 companies and a former board member of private companies. His early background consisted of employment with Big 4 accounting firms, the practice of law, and editing for the Journal of Taxation. He holds degrees from New York University Graduate School of Law-LLM-Tax, Tulane University School of Law-JD, and University of Wisconsin-Madison-BBA accounting. He also holds a Wisconsin Bar license-inactive and an inactive CPA license.  
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio3  -------->
+
+          <!----- Bio Card 4 ------->
+          <div class="bioCard bio4"> 
+            <label for="modalCB-bio4" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Barry Greenberg.jpg" alt="" />
+            <h3>Barry H. Greenberg </h3>
+            <h6>MD</h6>
+            <p>
+              Distinguished Professor of Medicine- Director, Advanced Heart Failure Treatment Program-UCSD Medical Center  
+            </p>
+            <label for="modalCB-bio4"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio4" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio4" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio4"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Barry Greenberg.jpg" alt="" />
+                <h2>Barry H. Greenberg </h2>
+                <h6>MD</h6>
+                <p>
+                  Barry H. Greenberg, MD, is Distinguished Professor of Medicine and Director of the Advanced Heart Failure Treatment Program at the University of California, San Diego (UCSD). After an internal medicine residency at Yale-New Haven Hospital, research training at the Lipid Metabolism Branch of the NHLBI and a fellowship in cardiology at UCSF, he joined the faculty of Oregon Health Sciences University School of Medicine. Dr. Greenberg has been a visiting professor in residence at the Royal Postgraduate Medical School in London, England and at the Laboratoire de MédicineExpérimentale of the Collège de France in Paris.  Dr. Greenberg’s research focuses on mechanisms of cardiac dysfunction and developing new heart failure therapies. He has served in the leadership of numerous international multicenter heart failure trials. In addition, Dr. Greenberg directs a laboratory that studies the molecular basis of cardiac remodeling and myocardial fibrosis. Dr. Greenberg is co-editor of Congestive Heart Failure: Pathophysiology, Diagnosis, and Comprehensive Approach to Management, the first comprehensive text in this field and he is a member of the editorial boards of several cardiology and subspecialty journals including JACC: Heart Failure and the European Journal of Heart Failure. Dr. Greenberg is a founding member and past President of the Heart Failure Society of America (HFSA). He has been recognized for many years as being one of the “Best Doctors in America” and “Best Doctors in San Diego.” Dr. Greenberg received the HFSA’s Lifetime Achievement Award in 2017.  
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio4  -------->
+
+          <!----- Bio Card 5 ------->
+          <div class="bioCard bio5"> 
+            <label for="modalCB-bio5" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Andreas Bader.jpg" alt="" />
+            <h3>Andreas Bader</h3>
+            <h6>Ph.D. <br>MicroRNA</h6>
+            <p>
+              Dr. Andreas Bader is SVP of R&D at Triumvira and has more than 20 years’ experience in oncology drug discovery and development. 
+            </p>
+            <label for="modalCB-bio5"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio5" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio5" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio5"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Andreas Bader.jpg" alt="" />
+                <h2>Andreas Bader</h2>
+                <h6>Ph.D. <br>MicroRNA</h6>
+                <p>
+                  Dr. Andreas Bader is SVP of R&D at Triumvira and has more than 20 years’ experience in oncology drug discovery and development. Previously, Dr. Bader acted as Co-Founder and CEO of Orros Biotherapeutics LLC, and as a scientific Co-Founder of Mirna Therapeutics, Inc., where he held multiple leading positions in R&D and led research programs from discovery to the completion of the MRX34 Phase 1 clinical trial, the first miRNA mimic ever to enter clinical testing. Prior to Mirna, Dr. Bader functioned as a Scientific Lead at Asuragen, Inc. Dr. Bader completed his post-doctoral training at The Scripps Research Institute, La Jolla, California, and received his Ph.D. in Biochemistry and his MSc degree in Biology from the University of Innsbruck, Austria.
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio5  -------->
+
+          <!----- Bio Card 6 ------->
+          <div class="bioCard bio6"> 
+            <label for="modalCB-bio6" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/StanleyRoberts.jpg" alt="" />
+            <h3>Stanley A. Roberts</h3>
+            <h6>Ph.D. <br>D.A.B.T.</h6>
+            <p>
+              Stan Roberts is an independent consultant in toxicology, drug metabolism (ADME), pharmacokinetics (PK) and drug development.  
+            </p>
+            <label for="modalCB-bio6"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio6" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio6" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio6"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/StanleyRoberts.jpg" alt="" />
+                <h2>Stanley A. Roberts</h2>
+                <h6>Ph.D. <br>D.A.B.T.</h6>
+                <p>
+                  Stan Roberts is an independent consultant in toxicology, drug metabolism (ADME), pharmacokinetics (PK) and drug development. He has over 35 years of experience in scientific and management positions in large (Sandoz, Abbott & Pfizer) and small (CovX) pharmaceutical companies. His management duties have included being the Global Director for Preclinical ADME/PK at Abbott for over eight years. Stan has also held a variety of leadership positions in toxicology organizations for over 20 years. For preclinical scientific strategy and operations, he has planned, conducted, interpreted and reported all types of toxicology (i.e., mechanism of toxicity, acute, dermal, ocular, ISO compliant medical device, sub chronic, chronic and carcinogenicity) and ADME/PK studies. Stan has created development plans and strategies for many types of pharmaceuticals including numerous classes of small molecules, proteins, monoclonal antibodies, antibody drug conjugates, peptides, nucleotides, glycosaminoglycan’s, medical devices and stem cell therapies.
+                  <br><br>Accomplishments include authoring over 400 internal final reports, major contributions to numerous successful regulatory documents/strategies/submissions (white papers, IND & NDA) and conducting problem solving research that evaluated the human relevance of animal toxicities as well as ADME/PK challenges. Stan has a BS (Animal Science), MS and Ph.D. (Pharmacology & Toxicology) from Purdue and post-doctoral fellowship in Molecular Toxicology (Medical University of South Carolina).  
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio6  -------->
+
+          <!----- Bio Card 7 ------->
+          <div class="bioCard bio7"> 
+            <label for="modalCB-bio7" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/biolab.jpg" alt="" />
+            <h3>Shirley Cao, MS.</h3>
+            <h6>Quality, Chemistry and Manufacturing and Controls</h6>
+            <p>
+              Chemistry manufacturing and controls (CMC) is an integral and important part of the development for any new therapeutic product or treatment.   
+            </p>
+            <label for="modalCB-bio7"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio7" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio7" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio7"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/biolab.jpg" alt="" />
+                <h2>Shirley Cao, MS.</h2>
+                <h6>Quality, Chemistry and Manufacturing and Controls</h6>
+                <p>
+                  Chemistry manufacturing and controls (CMC) is an integral and important part of the development for any new therapeutic product or treatment. With more than twenty years of pharmaceutical/biotechnology industry experience in Quality Assurance, Quality Control and Development. With over 25 years of experience, Ms. Cao has an excellent understanding of multi-country regulatory requirements in CMC for bringing new product or therapy from laboratory bench to human clinical trials, and in-depth knowledge and expertise in all aspects of CMC and a major contributor for CMC sections US and foreign IND filings.  Ms. Cao received her Bachelor’s degree in Chemistry from Zhengzhou University and her Master’s degree from Wuxi Institute of Light Industry (now Jiangnan University) in Food Science and technology.  
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio7  -------->
+      
+          <!----- Bio Card 8 ------->
+          <div class="bioCard bio8"> 
+            <label for="modalCB-bio8" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Louis Scotti.jpg" alt="" />
+            <h3>Louis Scotti, BS</h3>
+            <h6>Advisors and Consultants</h6>
+            <p>
+              Louis Scotti has headed business development, marketing, new products and investor/public relations functions during a long career in the bio/pharma industry both in the U.S. and internationally.   
+            </p>
+            <label for="modalCB-bio8"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio8" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio8" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio8"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Louis Scotti.jpg" alt="" />
+                <h2>Louis Scotti, BS</h2>
+                <h6>Advisors and Consultants</h6>
+                <p>
+                  Louis Scotti has headed business development, marketing, new products and investor/public relations functions during a long career in the bio/pharma industry both in the U.S. and internationally. His appointments include VP Business Development (IRISYS LLC), Chief Business Development Officer (Druggability Technologies), VP Commercial Planning/Business Development/Marketing (Arena Pharmaceuticals), Executive Director Licensing (Ligand Pharmaceuticals) and Product Manager (Bristol-Myers). He was a member of the board of directors for IRISYS Inc. from 2007 – 2012. During his career, he identified, negotiated and closed over 50 partnerships, R&D collaborations, licenses and commercialization agreements for biotech and pharmaceutical companies on both the buy and sell-side. He holds a B.S.E in Biomedical Engineering from the University of Pennsylvania and is a Certified Licensing Professional.  
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio8  -------->
+
+          <!----- Bio Card 9 ------->
+          <div class="bioCard bio9"> 
+            <label for="modalCB-bio9" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Scott Garrett.jpg" alt="" />
+            <h3>Scott Garrett MBA</h3>
+            <h6>Advisors and Consultants</h6>
+            <p>
+              Scott Garrett has deep experience in cardiovascular therapeutics, including gene therapy and regenerative medicine.  
+            </p>
+            <label for="modalCB-bio9"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio9" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio9" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio9"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Scott Garrett.jpg" alt="" />
+                <h2>Scott Garrett MBA</h2>
+                <h6>Advisors and Consultants</h6>
+                <p>
+                  Scott Garrett has deep experience in cardiovascular therapeutics, including gene therapy and regenerative medicine. Advanced experience in Commercial Strategy, Analytics, Market Access, Reimbursement and Health Economics. Scott has held leadership roles with Scios (acquired by J&J), CV Therapeutics (acquired by Gilead), Cadence Pharmaceuticals (acquired by Mallinckrodt) Portola Pharmaceuticals (acquired by Alexion Pharmaceuticals) and Turning Point Therapeutics (acquired by BMS).  
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio9  -------->
+
+          <!----- Bio Card 10 ------->
+          <div class="bioCard bio10"> 
+            <label for="modalCB-bio10" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Jing Liu.jpg" alt="" />
+            <h3>Jing Liu Ph.D., JD.</h3>
+            <h6>Patent Attorney</h6>
+            <p>
+              Experienced Life Science Technologies and IP Attorney and partner at Sheppard Mullin in the firm’s San Diego office.
+            </p>
+            <label for="modalCB-bio10"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio10" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio10" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio10"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Jing Liu.jpg" alt="" />
+                <h2>Jing Liu Ph.D., JD.</h2>
+                <h6>Patent Attorney</h6>
+                <p>
+                  Experienced Life Science Technologies and IP Attorney and partner at Sheppard Mullin in the firm’s San Diego office.
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio10  -------->
+
+          <!----- Bio Card 11 ------->
+          <div class="bioCard bio11"> 
+            <label for="modalCB-bio11" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Sandeep.jpg" alt="" />
+            <h3>Sandeep Birdi JD. MSc.</h3>
+            <h6>Patent Attorney</h6>
+            <p>
+              Founder of SAND IP.  European patent attorney and a Chartered UK patent attorney. Mr. Birdi is a graduate of the University of Leeds obtaining a first class honors Master’s degree in chemistry.   
+            </p>
+            <label for="modalCB-bio11"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio11" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio11" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio11"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Sandeep.jpg" alt="" />
+                <h2>Sandeep Birdi JD. MSc.</h2>
+                <h6>Patent Attorney</h6>
+                <p>
+                  Founder of SAND IP.  European patent attorney and a Chartered UK patent attorney. Mr. Birdi is a graduate of the University of Leeds obtaining a first class honors Master’s degree in chemistry.   
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio11  -------->
+
+          <!----- Bio Card 12 ------->
+          <div class="bioCard bio12"> 
+            <label for="modalCB-bio12" class="bioCard-bg"><!-- click on bioCard --></label>
+            <img class="photo" src="/images/Jim Krenn.jpg" alt="" />
+            <h3>Jim Krenn, JD.</h3>
+            <h6>Corporate Attorney</h6>
+            <p>
+              Jim is a partner at Morrison & Foerster and has extensive experience representing private and public companies and investors in significant business transactions from formation through liquidity. 
+            </p>
+            <label for="modalCB-bio12"><div class="read-more">Read more..</div></label>
+            <input type="checkbox" id="modalCB-bio12" class="modal-state" />
+            <div class="modal"> 
+              <label for="modalCB-bio12" class="modal-bg"></label>
+              <div class="modal-inner">
+                <div class="modal-header">
+                  <label class="modal-close" for="modalCB-bio12"> Close</label>
+                  <hr>
+                </div>
+                <img class="photo" src="/images/Jim Krenn.jpg" alt="" />
+                <h2>Jim Krenn, JD.</h2>
+                <h6>Corporate Attorney</h6>
+                <p>
+                  Jim is a partner at Morrison & Foerster and has extensive experience representing private and public companies and investors in significant business transactions from formation through liquidity. 
+                </p>
+              </div><!----- End: modal-inner -------->
+            </div><!----- End: modal  -------->
+          </div><!----- End: bio12  -------->
+
 
         <div class="captionBar">
           <h1>Our Team</h1>
-     
         </div>
       </section>
-    -->
+
 
 
     </main>

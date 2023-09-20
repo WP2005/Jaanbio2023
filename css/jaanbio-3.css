@@ -17,7 +17,6 @@ h1 {
 
 .container {
   width: 1200px;
-  justify-content: center;
 }
 
 /******* NAV SECTION *******/
@@ -155,15 +154,16 @@ nav li {
 }
 .modal-inner {
   position: relative;
-  max-width: 70vw;
-  min-width: 500px;
+  max-width: 70%;
+  min-width: 700px;
   max-height: 90vh;
   margin: 2em;
   padding: 2% 5% 2% 5%;
   overflow: auto;
+  text-align: left;
   background: #fff;
   color: black;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: top 0.25s ease;
 }
 .theProblem .modal-state:checked + .modal {
@@ -210,12 +210,14 @@ nav li {
   position: relative;
 }
 .topicExcerpt .read-more {
-  padding: 0.5em;
+  padding: 0.5em 1em;
   margin-top: 1em;
   width: fit-content;
   cursor: pointer;
   display: block;
   margin-top: 1em;
+  bottom: 0px;
+  top: 100px;
 }
 .topicExcerpt .read-more:hover {
   background-color: rgba(0, 0, 0, 0.3);
@@ -232,65 +234,98 @@ nav li {
   background-color: rgb(67, 26, 47);
   display: flex;
   position: relative;
+  justify-content: center;
 }
-
 .team .container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
+  column-gap: 30px;
   row-gap: 50px;
-  padding: 250px 50px 50px 50px;
+  padding: 230px 0px 0px 0px;
+  justify-content: center;
+}
+.team .modal-state {
+  display: none;
 }
 
-.team .captionBar {
-  top: 100px;
-  width: 50%;
-  border-radius: 0 80px 80px 0;
-
-  padding: 10px 50px 10px 50px;
-  min-width: 400px;
+.team .modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease;
 }
-
-/***** Team Bio Card *****/
-
+.team .modal-state:checked ~ .modal .modal-inner {
+  top: 0;
+}
 .team h3 {
   margin: 10px 0;
+  font-size: 0.8em;
+}
+.team h2 {
+  font-size: 1.5em;
 }
 .team h6 {
   margin: 5px 0;
   text-transform: uppercase;
 }
 .team p {
-  font-size: 14px;
+  font-size: 1em;
   line-height: 21px;
 }
-.team .card-container {
+
+.team .captionBar {
+  top: 100px;
+  left: 0px;
+  width: 50%;
+  border-radius: 0 80px 80px 0;
+  padding: 10px 50px 10px 50px;
+  min-width: 400px;
+}
+
+/***** Team Bio Card *****/
+.bioCard {
+  position: relative;
   background-color: #72146c;
   border-radius: 5px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   color: #b3b8cd;
-  padding-top: 30px;
-  position: relative;
+  padding: 30px 10px 70px 10px;
   width: 220px;
   max-width: 100%;
   text-align: center;
+  overflow: hidden;
 }
-.team .card-container .photo {
+.bioCard-bg {
+  /*  click bg to close modal */
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.bioCard:hover > .bioCard-bg {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.bioCard .photo {
   border: 1px solid #03bfcb;
   border-radius: 50%;
   padding: 7px;
   width: 150px;
+  height: 150px;
 }
-.team .card-container .read-more {
+.bioCard .read-more {
   background-color: #3d294a;
-  text-align: left;
+  width: 100%;
   padding: 15px;
-  margin-top: 30px;
+  margin-left: -10px;
   color: rgb(108, 238, 188);
   text-decoration: none;
   font-size: 12px;
+  position: absolute;
+  bottom: 0px;
 }
-.team .card-container .read-more:hover {
+.bioCard .read-more:hover {
   color: azure;
   background-color: #f295de;
   cursor: pointer;
