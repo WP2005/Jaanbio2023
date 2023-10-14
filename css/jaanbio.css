@@ -315,7 +315,6 @@ nav li {
 .bioCard:hover > .bioCard-bg {
   background-color: rgba(0, 0, 0, 0.3);
 }
-
 .bioCard .photo {
   border: 1px solid #03bfcb;
   border-radius: 50%;
@@ -338,4 +337,18 @@ nav li {
   color: azure;
   background-color: #f295de;
   cursor: pointer;
+}
+
+/**** Publications ***/
+
+.publications {
+  background-color: rgb(39, 39, 47);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.publications .container {
+  background-color: yellow;
+  height: 500px;
 }
