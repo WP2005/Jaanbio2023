@@ -153,7 +153,7 @@ nav li {
   z-index: 999;
 }
 .modal-inner {
-  max-width: 70%;
+  max-width: 100%;
   min-width: 700px;
   max-height: 90vh;
   margin: 2em;
@@ -166,7 +166,7 @@ nav li {
   transition: top 0.25s ease;
   position: absolute;
   top: 30%;
-  left: 30%;
+  left: 35%;
   transform: translate(-30%, -30%);
 }
 .modal-state {
@@ -416,4 +416,42 @@ nav li {
 
 .publications .btn_primary:hover {
   box-shadow: 0px 2px 1rem rgb(241, 162, 82);
+}
+
+.footer {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 3em 0 3em 0;
+}
+
+.footer .container {
+  display: flex;
+  color: white;
+}
+
+.footer .section {
+  border: 0px solid gray;
+  min-width: 25%;
+}
+
+.footer .logo {
+  width: 180px;
+}
+
+.footer h3 {
+  font-weight: 50;
+  font-size: 1em;
+  color: #ffffff;
+}
+.footer h4 {
+  font-weight: 50;
+  font-size: 0.8em;
+  color: #f0529f;
+}
+.footer h5 {
+  font-weight: 50;
+  font-size: 0.8em;
+  color: #999;
 }
