@@ -172,13 +172,11 @@ nav li {
 .modal-state {
   display: none;
 }
-
 .modal-state:checked + .modal {
   opacity: 1;
   visibility: visible;
   transition: opacity 1s ease;
 }
-
 .modal-bg {
   /*  click bg to close modal */
   position: fixed;
@@ -203,6 +201,19 @@ nav li {
 .modal-header {
   text-align: right;
   margin-bottom: 2em;
+}
+.modal-header::after {
+  content: "";
+  display: block;
+  border-top: 1px solid #000; /* Change the color, width, and style as needed */
+  margin: 10px 0; /* Adjust the margin to position the line as desired */
+}
+
+.modal-footer::before {
+  content: "";
+  display: block;
+  border-top: 1px solid #000; /* Change the color, width, and style as needed */
+  margin: 10px 0; /* Adjust the margin to position the line as desired */
 }
 
 /******** Modal Problem Popup ********/
