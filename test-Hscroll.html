@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        overflow: hidden;
+        margin: 0;
+      }
+
+      .scrolling-wrapper-flexbox {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        white-space: nowrap;
+        overflow-y: hidden;
+      }
+
+      .card {
+        flex: 0 0 auto;
+        width: 300px;
+        padding: 10px;
+        margin: 10px;
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        scroll-snap-align: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scrolling-wrapper-flexbox">
+      <div class="card"><h2>Card</h2></div>
+      <div class="card"><h2>Card</h2></div>
+      <div class="card"><h2>Card</h2></div>
+      <div class="card"><h2>Card</h2></div>
+      <div class="card"><h2>Card</h2></div>
+      <div class="card"><h2>Card</h2></div>
+      <div class="card"><h2>Card</h2></div>
+      <div class="card"><h2>Card</h2></div>
+      <div class="card"><h2>Card</h2></div>
+    </div>
+  </body>
+</html>
