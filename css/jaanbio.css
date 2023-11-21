@@ -7,17 +7,17 @@
 
 :root {
   --primaryBGcolor-1: rgb(255, 255, 255);
-  --primaryBGcolor-2: rgb(60, 63, 97);
-  --primaryBGcolor-3: rgb(35, 44, 122);
-  --primaryBGcolor-4: rgb(7, 31, 244);
-  --primaryBGcolor-pop-1: rgb(244, 7, 141);
+  --primaryBGcolor-2: rgb(39, 47, 112);
+  --primaryBGcolor-3: rgb(26, 37, 137);
+  --primaryBGcolor-4: rgb(12, 18, 59);
+  --primaryBGcolor-pop-1: rgb(169, 32, 84);
   --primaryBGcolor-pop-2: rgb(244, 7, 141);
 
   --fontColor-1: black;
   --fontColor-2: rgb(83, 83, 83);
   --fontColor-3: rgb(187, 187, 187);
   --fontColor-4: rgb(255, 255, 255);
-  --fontColor-pop-1: rgb(244, 244, 7);
+  --fontColor-pop-1: rgb(7, 173, 244);
   --fontColor-pop-2: rgb(244, 7, 31);
 }
 
@@ -37,7 +37,7 @@ h1 {
 
 /******* NAV SECTION *******/
 nav {
-  background-color: var(--primaryBGcolor-2);
+  background-color: var(--primaryBGcolor-4);
   display: flex;
   justify-content: center;
   position: fixed;
@@ -98,10 +98,10 @@ nav li {
 }
 .home .rightPanel {
   background: linear-gradient(
-    200deg,
-    var(--primaryBGcolor-1),
-    var(--primaryBGcolor-2),
-    var(--primaryBGcolor-2)
+    30deg,
+    var(--primaryBGcolor-4) 0%,
+    var(--primaryBGcolor-3) 40%,
+    var(--primaryBGcolor-2) 70%
   );
 }
 .home .rightPanel .contentArea {
@@ -117,9 +117,8 @@ nav li {
 .captionBar {
   background-image: linear-gradient(
     200deg,
-    var(--primaryBGcolor-3),
-    var(--primaryBGcolor-2),
-    var(--primaryBGcolor-1)
+    var(--primaryBGcolor-pop-1) 5%,
+    var(--primaryBGcolor-3) 50%
   );
   border-radius: 0 80px 80px 0;
   width: 65%;
@@ -146,17 +145,16 @@ nav li {
   position: relative;
 }
 .about .leftPanel {
-  background-color: var(--primaryBGcolor-4);
+  background-color: var(--primaryBGcolor-2);
 }
 .about .leftPanel .topicExcerpt {
   color: var(--fontColor-4);
 }
 .about .rightPanel {
-  background-color: var(--primaryBGcolor-3);
+  background-color: var(--primaryBGcolor-1);
 }
 .about .rightPanel .topicExcerpt {
-  background-color: var(--primaryBGcolor-3);
-  color: var(--fontColor-4);
+  color: var(--fontColor-1);
 }
 .about .modal-state {
   display: none;
@@ -258,7 +256,7 @@ nav li {
 
 /********** Team **********/
 .team {
-  background-color: rgb(67, 26, 47);
+  background-color: var(--primaryBGcolor-4);
   display: flex;
   position: relative;
   justify-content: center;
@@ -273,11 +271,11 @@ nav li {
   justify-content: center;
 }
 .team .heading.executives {
-  color: white;
+  color: var(--fontColor-4);
   margin-top: 250px;
 }
 .team .heading.advisors {
-  color: white;
+  color: var(--fontColor-4);
   margin-top: 20px;
 }
 
@@ -309,10 +307,10 @@ nav li {
 /***** Team Bio Card *****/
 .bioCard {
   position: relative;
-  background-color: #72146c;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-  color: #b3b8cd;
+  color: var(--fontColor-3);
   padding: 30px 10px 70px 10px;
   width: 220px;
   max-width: 100%;
@@ -332,18 +330,18 @@ nav li {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .bioCard .photo {
-  border: 1px solid #03bfcb;
+  border: 1px solid var(--primaryBGcolor-2);
   border-radius: 50%;
   padding: 7px;
   width: 150px;
   height: 150px;
 }
 .bioCard .read-more {
-  background-color: #3d294a;
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   padding: 15px;
   margin-left: -10px;
-  color: rgb(108, 238, 188);
+  color: var(--fontColor-pop-1);
   text-decoration: none;
   font-size: 12px;
   position: absolute;
@@ -351,7 +349,7 @@ nav li {
 }
 .bioCard .read-more:hover {
   color: azure;
-  background-color: #f295de;
+  background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
