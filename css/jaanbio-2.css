@@ -8,8 +8,9 @@
 :root {
   --primaryBGcolor-1: rgb(255, 255, 255);
   --primaryBGcolor-2: rgb(105, 110, 149);
-  --primaryBGcolor-3: rgb(39, 47, 123);
-  --primaryBGcolor-4: rgb(12, 18, 59);
+  --primaryBGcolor-3: rgb(53, 61, 107);
+  --primaryBGcolor-4: rgb(7, 30, 158);
+
   --primaryBGcolor-pop-1: rgb(169, 32, 84);
   --primaryBGcolor-pop-2: rgb(244, 7, 141);
 
@@ -17,8 +18,9 @@
   --fontColor-2: rgb(83, 83, 83);
   --fontColor-3: rgb(187, 187, 187);
   --fontColor-4: rgb(255, 255, 255);
+
   --fontColor-pop-1: rgb(244, 7, 27);
-  --fontColor-pop-2: rgb(12, 4, 255);
+  --fontColor-pop-2: rgb(4, 146, 255);
   --fontColor-pop-3: rgb(4, 255, 242);
 
   --captionbarBG: linear-gradient(
@@ -27,6 +29,9 @@
     rgba(30, 30, 205, 0.1) 35%,
     rgba(0, 0, 0, 0.1) 80%
   );
+
+  --tintBG-1: rgba(45, 136, 210, 0.4);
+  --tintBG-2: rgba(210, 45, 106, 0.3);
 }
 
 body {
@@ -60,14 +65,22 @@ h6 {
 
 /******* NAV SECTION *******/
 nav {
-  background-color: var(--primaryBGcolor-4);
+  background-color: var(--primaryBGcolor-3);
   display: flex;
   justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  padding: 20px 10px 10px 10px;
   z-index: 100;
-  width: 100vw;
+}
+nav .container {
+  display: flex;
+  justify-content: right;
+  align-items: start;
+
+  padding: 0px 0px 0px 0px;
 }
 nav ul {
   display: flex;
@@ -77,7 +90,7 @@ nav ul {
 nav a {
   text-decoration: none;
   color: var(--fontColor-4);
-  font-size: 14px;
+  font-size: 15px;
 }
 nav a:hover {
   color: var(--fontColor-pop-1);
@@ -86,6 +99,11 @@ nav li {
   list-style: none;
   margin: 15px;
 }
+
+nav .logo {
+  width: 200px;
+}
+
 /******* END NAV SECTION *******/
 
 /******* HOME SECTION *******/
@@ -96,6 +114,7 @@ nav li {
 
 .hero-bg {
   position: relative;
+  margin-top: 90px;
   width: 100%;
   height: 450px;
   background-image: url(https://st3.depositphotos.com/4314643/13004/i/450/depositphotos_130040676-stock-photo-3d-illustration-of-molecule-model.jpg);
@@ -110,12 +129,7 @@ nav li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    210,
-    45,
-    106,
-    0.3
-  ); /* Adjust the color and opacity as needed */
+  background-color: var(--tintBG-1);
   z-index: 0; /* Ensure the overlay is behind the content */
 }
 
@@ -140,13 +154,13 @@ nav li {
 .home .rightPanel .panelContainer {
   margin-right: auto;
   color: var(--fontColor-2);
-  padding: 120px 0px 50px 50px;
+  padding: 0px 0px 50px 50px;
   max-width: 600px;
 }
 .home .rightPanel img {
   width: 100%;
   height: 100px;
-  margin: 30px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px rgba(88, 88, 88, 0.3);
 }
@@ -154,24 +168,24 @@ nav li {
   font-weight: lighter;
 }
 .home .logo {
-  width: 350px;
+  width: 200px;
   padding: 0 0 10px 0;
 }
 
-.readMore {
+.home .readMore {
   color: var(--fontColor-pop-1);
 }
-.readMore::before {
+.home .readMore::before {
   content: "Read more "; /* Unicode for double-right arrow in Font Awesome */
   font-size: 15px;
 }
-.readMore::after {
+.home .readMore::after {
   content: " \f101"; /* Unicode for double-right arrow in Font Awesome */
   font-family: "Font Awesome 5 Free"; /* Ensure you have Font Awesome loaded */
   font-weight: 510;
   font-size: 11px;
 }
-.readMore:hover {
+.home .readMore:hover {
   color: var(--fontColor-pop-2);
 }
 
@@ -188,7 +202,7 @@ nav li {
   position: absolute;
   display: flex;
   justify-content: flex-end;
-  top: 150px;
+  top: 250px;
   left: 0px;
   background-image: var(--captionbarBG);
   color: var(--fontColor-4);
@@ -207,7 +221,6 @@ nav li {
 .captionBar h1 {
   font-weight: lighter;
 }
-
 .captionBar h2 {
   color: var(--fontColor-4);
   font-weight: lighter;
@@ -321,14 +334,13 @@ nav li {
 .team {
   position: relative;
   text-align: center;
-  color: black;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(https://st3.depositphotos.com/4314643/13004/i/450/depositphotos_130040676-stock-photo-3d-illustration-of-molecule-model.jpg);
+  background-image: url(https://media.istockphoto.com/id/1310024666/photo/biotechnology-molecular-engineering-dna-genetic-manipulation.jpg?s=612x612&w=0&k=20&c=5a8d3LM6CZdja2RNb7_Dgr663qoBNjP_0ZZww5hKSUE=);
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* bg image stays fixed as you scroll  */
@@ -341,12 +353,7 @@ nav li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    37,
-    114,
-    142,
-    0.7
-  ); /* Adjust the color and opacity as needed */
+  background-color: var(--tintBG-1);
   z-index: 0; /* Ensure the overlay is behind the content */
 }
 .team .container {
@@ -357,6 +364,7 @@ nav li {
   row-gap: 30px;
   padding: 0px 0px 50px 0px;
   justify-content: center;
+  z-index: 1;
 }
 .team .heading.executives {
   color: var(--fontColor-4);
@@ -370,6 +378,7 @@ nav li {
   margin: 10px 0;
 }
 .team h2 {
+  font-weight: lighter;
 }
 .team h6 {
   margin: 5px 0;
@@ -391,7 +400,7 @@ nav li {
 /***** Team Bio Card *****/
 .bioCard {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--primaryBGcolor-3);
   border-radius: 5px;
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
   color: var(--fontColor-3);
@@ -425,7 +434,7 @@ nav li {
   width: 100%;
   padding: 15px;
   margin-left: -10px;
-  color: var(--fontColor-pop-1);
+  color: var(--fontColor-pop-3);
   text-decoration: none;
   font-size: 12px;
   position: absolute;
