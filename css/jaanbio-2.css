@@ -17,8 +17,9 @@
   --fontColor-2: rgb(83, 83, 83);
   --fontColor-3: rgb(187, 187, 187);
   --fontColor-4: rgb(255, 255, 255);
-  --fontColor-pop-1: rgb(244, 7, 185);
-  --fontColor-pop-2: rgb(244, 7, 31);
+  --fontColor-pop-1: rgb(244, 7, 27);
+  --fontColor-pop-2: rgb(12, 4, 255);
+  --fontColor-pop-3: rgb(4, 255, 242);
 
   --captionbarBG: linear-gradient(
     200deg,
@@ -38,7 +39,7 @@ h1 {
   font-size: 35px;
 }
 h2 {
-  font-size: 25px;
+  font-size: 30px;
 }
 h3 {
   font-size: 20px;
@@ -127,11 +128,9 @@ nav li {
 .home .rightPanel {
   display: flex;
   flex-direction: column;
-
   background-color: var(--primaryBGcolor-1);
   width: 50%;
 }
-
 .home .leftPanel .panelContainer {
   margin-left: auto;
   color: var(--fontColor-1);
@@ -141,15 +140,15 @@ nav li {
 .home .rightPanel .panelContainer {
   margin-right: auto;
   color: var(--fontColor-2);
-  padding: 0px 0px 50px 50px;
+  padding: 120px 0px 50px 50px;
   max-width: 600px;
 }
-
 .home .rightPanel img {
-  width: 500px;
-  height: 150px;
-  border-radius: 5px;
-  z-index: 5;
+  width: 100%;
+  height: 100px;
+  margin: 30px 0px 20px 0px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px rgba(88, 88, 88, 0.3);
 }
 .home h3 {
   font-weight: lighter;
@@ -157,6 +156,23 @@ nav li {
 .home .logo {
   width: 350px;
   padding: 0 0 10px 0;
+}
+
+.readMore {
+  color: var(--fontColor-pop-1);
+}
+.readMore::before {
+  content: "Read more "; /* Unicode for double-right arrow in Font Awesome */
+  font-size: 15px;
+}
+.readMore::after {
+  content: " \f101"; /* Unicode for double-right arrow in Font Awesome */
+  font-family: "Font Awesome 5 Free"; /* Ensure you have Font Awesome loaded */
+  font-weight: 510;
+  font-size: 11px;
+}
+.readMore:hover {
+  color: var(--fontColor-pop-2);
 }
 
 .home .read-more {
@@ -194,6 +210,7 @@ nav li {
 
 .captionBar h2 {
   color: var(--fontColor-4);
+  font-weight: lighter;
 }
 .captionBar h3 {
   font-weight: lighter;
