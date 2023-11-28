@@ -7,8 +7,8 @@
 
 :root {
   --primaryBGcolor-1: rgb(255, 255, 255);
-  --primaryBGcolor-2: rgb(39, 47, 112);
-  --primaryBGcolor-3: rgb(26, 37, 137);
+  --primaryBGcolor-2: rgb(105, 110, 149);
+  --primaryBGcolor-3: rgb(39, 47, 123);
   --primaryBGcolor-4: rgb(12, 18, 59);
   --primaryBGcolor-pop-1: rgb(169, 32, 84);
   --primaryBGcolor-pop-2: rgb(244, 7, 141);
@@ -17,8 +17,15 @@
   --fontColor-2: rgb(83, 83, 83);
   --fontColor-3: rgb(187, 187, 187);
   --fontColor-4: rgb(255, 255, 255);
-  --fontColor-pop-1: rgb(7, 173, 244);
+  --fontColor-pop-1: rgb(244, 7, 185);
   --fontColor-pop-2: rgb(244, 7, 31);
+
+  --captionbarBG: linear-gradient(
+    200deg,
+    rgba(248, 12, 12, 0.63) 5%,
+    rgba(30, 30, 205, 0.1) 35%,
+    rgba(0, 0, 0, 0.1) 80%
+  );
 }
 
 body {
@@ -83,15 +90,34 @@ nav li {
 /******* HOME SECTION *******/
 .home {
   display: flex;
-  flex-direction: center;
-  justify-content: center;
   margin-top: 50px;
 }
-.home .logo {
-  width: 300px;
-  margin-bottom: 160px;
-  margin-top: 50px;
+
+.hero-bg {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background-image: url(https://st3.depositphotos.com/4314643/13004/i/450/depositphotos_130040676-stock-photo-3d-illustration-of-molecule-model.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* bg image stays fixed as you scroll  */
 }
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    210,
+    45,
+    106,
+    0.3
+  ); /* Adjust the color and opacity as needed */
+  z-index: 0; /* Ensure the overlay is behind the content */
+}
+
 .home .leftPanel {
   display: flex;
   flex-direction: column;
@@ -101,7 +127,7 @@ nav li {
 .home .rightPanel {
   display: flex;
   flex-direction: column;
-  position: relative;
+
   background-color: var(--primaryBGcolor-1);
   width: 50%;
 }
@@ -115,7 +141,7 @@ nav li {
 .home .rightPanel .panelContainer {
   margin-right: auto;
   color: var(--fontColor-2);
-  padding: 350px 0px 50px 50px;
+  padding: 0px 0px 50px 50px;
   max-width: 600px;
 }
 
@@ -125,39 +151,59 @@ nav li {
   border-radius: 5px;
   z-index: 5;
 }
+.home h3 {
+  font-weight: lighter;
+}
+.home .logo {
+  width: 350px;
+  padding: 0 0 10px 0;
+}
 
 .home .read-more {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--primaryBGcolor-2);
+  color: var(--fontColor-4);
   border-radius: 5px;
   box-shadow: 2px 2px 4px 2px rgba(88, 88, 88, 0.2);
-  padding: 0px 0px 0px 0px;
+  padding: 110px 0px 0px 0px;
 }
 
 /***** Caption Bar *****/
 .captionBar {
-  background-image: linear-gradient(
-    200deg,
-    var(--primaryBGcolor-pop-1) 5%,
-    var(--primaryBGcolor-3) 50%
-  );
-  border-radius: 0 80px 80px 0;
-  width: 60%;
   position: absolute;
-  top: 200px;
+  display: flex;
+  justify-content: flex-end;
+  top: 150px;
   left: 0px;
-  text-align: right;
+  background-image: var(--captionbarBG);
   color: var(--fontColor-4);
-  padding: 20px 50px 30px 50px;
+  border-radius: 0 80px 80px 0;
+  width: 65%;
+  padding: 20px 80px 30px 50px;
   min-width: 700px;
-  z-index: 100;
 }
+.captionText {
+  margin-left: auto;
+}
+.captionBar .logo {
+  width: 100px;
+  margin-left: auto;
+}
+.captionBar h1 {
+  font-weight: lighter;
+}
+
 .captionBar h2 {
   color: var(--fontColor-4);
 }
 .captionBar h3 {
   font-weight: lighter;
-  color: var(--fontColor-3);
+  color: var(--fontColor-4);
 }
+.captionBar h4 {
+  font-weight: lighter;
+  color: var(--fontColor-4);
+}
+
 /******* END HOME SECTION *******/
 
 /***** Modal *****/
@@ -240,7 +286,7 @@ nav li {
   position: relative;
 }
 .topicExcerpt .read-more {
-  padding: 0.5em 1em;
+  padding: 5px 15px 5px 15px;
   margin-top: 1em;
   width: fit-content;
   cursor: pointer;

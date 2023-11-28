@@ -19,6 +19,8 @@
   --fontColor-4: rgb(255, 255, 255);
   --fontColor-pop-1: rgb(7, 173, 244);
   --fontColor-pop-2: rgb(244, 7, 31);
+
+  --bgTint-1: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -28,26 +30,12 @@ body {
 }
 
 h1 {
-  font-size: 35px;
-}
-h2 {
-  font-size: 25px;
-}
-h3 {
   font-size: 20px;
-}
-h4 {
-  font-size: 15px;
-}
-h5 {
-  font-size: 10px;
-}
-h6 {
-  font-size: 8px;
 }
 
 .container {
   width: 1200px;
+  border: #a32727 solid 5px;
 }
 
 /******* NAV SECTION *******/
@@ -61,6 +49,7 @@ nav {
   z-index: 100;
   width: 100vw;
 }
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -83,54 +72,61 @@ nav li {
 /******* HOME SECTION *******/
 .home {
   display: flex;
-  flex-direction: center;
+  margin-top: 0px;
+  position: relative;
+  text-align: center;
   justify-content: center;
-  margin-top: 50px;
+  color: black;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(https://st3.depositphotos.com/4314643/13004/i/450/depositphotos_130040676-stock-photo-3d-illustration-of-molecule-model.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* bg image stays fixed as you scroll  */
+  z-index: 1;
 }
-.home .logo {
-  width: 300px;
-  margin-bottom: 160px;
-  margin-top: 50px;
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bgTint-1);
+  z-index: -1; /* Behind the background image */
 }
+
 .home .leftPanel {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--primaryBGcolor-1);
+  width: 70%;
+  border: #333 11px solid;
+  text-align: left;
   width: 50%;
+  border: #f0529f 5px solid;
+  padding: 70px 70px 70px 70px;
 }
 .home .rightPanel {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background-color: var(--primaryBGcolor-1);
-  width: 50%;
+  text-align: left;
+  color: var(--fontColor-4);
 }
 
-.home .leftPanel .panelContainer {
-  margin-left: auto;
-  color: var(--fontColor-1);
-  padding: 0px 70px 50px 0px;
-  max-width: 600px;
+.home .logo {
+  width: 300px;
+  margin-top: 20px;
 }
-.home .rightPanel .panelContainer {
-  margin-right: auto;
-  color: var(--fontColor-2);
-  padding: 350px 0px 50px 50px;
-  max-width: 600px;
+.contentArea {
+  margin-top: 200px;
 }
-
+.home .rightPanel {
+  background: var(--bgTint-1);
+}
+.home .contentArea {
+  margin-top: 250px;
+  text-align: left;
+}
 .home .rightPanel img {
   width: 500px;
-  height: 150px;
+  height: 100px;
   border-radius: 5px;
-  z-index: 5;
-}
-
-.home .read-more {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px 2px rgba(88, 88, 88, 0.2);
-  padding: 0px 0px 0px 0px;
 }
 
 /***** Caption Bar *****/
@@ -141,7 +137,7 @@ nav li {
     var(--primaryBGcolor-3) 50%
   );
   border-radius: 0 80px 80px 0;
-  width: 60%;
+  width: 65%;
   position: absolute;
   top: 200px;
   left: 0px;
@@ -149,16 +145,41 @@ nav li {
   color: var(--fontColor-4);
   padding: 20px 50px 30px 50px;
   min-width: 700px;
-  z-index: 100;
+}
+.captionBar h1 {
+  font-size: 35px;
 }
 .captionBar h2 {
-  color: var(--fontColor-4);
-}
-.captionBar h3 {
+  font-size: 20px;
   font-weight: lighter;
   color: var(--fontColor-3);
 }
 /******* END HOME SECTION *******/
+
+/******* ABOUT SECTION *******/
+.about {
+  display: flex;
+  position: relative;
+}
+.about .leftPanel {
+  background-color: var(--primaryBGcolor-2);
+  width: 50%;
+  padding: 70px 70px 70px 15%;
+}
+.about .leftPanel .topicExcerpt {
+  color: var(--fontColor-4);
+}
+.about .rightPanel {
+  background-color: var(--primaryBGcolor-1);
+  width: 50%;
+  padding: 70px 70px 70px 70px;
+}
+.about .rightPanel .topicExcerpt {
+  color: var(--fontColor-1);
+}
+.about .modal-state {
+  display: none;
+}
 
 /***** Modal *****/
 .modal {
@@ -255,6 +276,13 @@ nav li {
 }
 
 /********** Team **********/
+.team2 {
+  background-color: var(--primaryBGcolor-4);
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
 .team {
   position: relative;
   text-align: center;
@@ -282,10 +310,11 @@ nav li {
     37,
     114,
     142,
-    0.7
+    0.2
   ); /* Adjust the color and opacity as needed */
   z-index: 0; /* Ensure the overlay is behind the content */
 }
+
 .team .container {
   display: flex;
   flex-wrap: wrap;
@@ -294,6 +323,7 @@ nav li {
   row-gap: 30px;
   padding: 0px 0px 50px 0px;
   justify-content: center;
+  z-index: 0;
 }
 .team .heading.executives {
   color: var(--fontColor-4);
@@ -303,16 +333,20 @@ nav li {
   color: var(--fontColor-4);
   margin-top: 20px;
 }
+
 .team h3 {
   margin: 10px 0;
+  font-size: 0.8em;
 }
 .team h2 {
+  font-size: 1.5em;
 }
 .team h6 {
   margin: 5px 0;
   text-transform: uppercase;
 }
 .team p {
+  font-size: 1em;
   line-height: 21px;
 }
 
@@ -328,9 +362,9 @@ nav li {
 /***** Team Bio Card *****/
 .bioCard {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(51, 63, 107, 0.8);
   border-radius: 5px;
-  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.9);
   color: var(--fontColor-3);
   padding: 30px 10px 70px 10px;
   width: 220px;
@@ -487,13 +521,16 @@ nav li {
 
 .footer h3 {
   font-weight: 50;
+  font-size: 1em;
   color: #ffffff;
 }
 .footer h4 {
   font-weight: 50;
+  font-size: 0.8em;
   color: #f0529f;
 }
 .footer h5 {
   font-weight: 50;
+  font-size: 0.8em;
   color: #999;
 }
