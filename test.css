@@ -1,31 +1,59 @@
-/* Basic reset */
-html,
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
+}
+
+/* Hide the checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon design */
+.menu-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: url("https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg")
+    no-repeat center;
+  cursor: pointer;
+}
+
+/* Styling for the mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  width: 180px;
+  padding: 60px 0 0; /* Consider the height of the header */
+  z-index: 999;
+}
+
+/* When the checkbox is checked, show the menu */
+.menu-toggle:checked + .menu-icon + .mobile-menu {
+  display: block;
+}
+
+/* Styling for the menu items */
+.mobile-menu ul {
+  list-style-type: none;
   padding: 0;
+  margin-top: 0; /* Add margin-top to separate menu from the header */
 }
 
-/* Styling the parallax container */
-.parallax-container {
-  height: 100vh; /* Adjust the height as needed */
-  overflow-x: hidden;
-  overflow-y: auto;
-  position: relative;
-  perspective: 1px;
+.mobile-menu li {
+  padding: 8px 0;
 }
 
-/* Background image and parallax effect */
-.parallax-content {
-  position: relative;
-  background-image: url("https://thumbs.dreamstime.com/b/molecular-biology-tools-27002789.jpg"); /* Replace 'your-image.jpg' with your image URL */
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  height: 100%; /* Adjust the height as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff; /* Text color for better visibility */
-  text-align: center;
-  transform: translateZ(-1px) scale(1.5);
+.mobile-menu a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 15px;
+}
+
+main {
+  padding: 60px 20px 20px;
 }

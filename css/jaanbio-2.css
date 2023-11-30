@@ -8,8 +8,8 @@
 :root {
   --primaryBGcolor-1: rgb(255, 255, 255);
   --primaryBGcolor-2: rgb(105, 110, 149);
-  --primaryBGcolor-3: rgb(53, 61, 107);
-  --primaryBGcolor-4: rgb(7, 30, 158);
+  --primaryBGcolor-3: rgba(57, 64, 85, 0.5);
+  --primaryBGcolor-4: rgb(0, 0, 0);
 
   --primaryBGcolor-pop-1: rgb(169, 32, 84);
   --primaryBGcolor-pop-2: rgb(244, 7, 141);
@@ -25,13 +25,13 @@
 
   --captionbarBG: linear-gradient(
     200deg,
-    rgba(248, 12, 12, 0.63) 5%,
-    rgba(30, 30, 205, 0.1) 35%,
-    rgba(0, 0, 0, 0.1) 80%
+    rgba(55, 64, 123, 0.3) 5%,
+    rgba(57, 166, 225, 0.3) 45%,
+    rgba(0, 0, 0, 0.2) 70%
   );
 
-  --tintBG-1: rgba(45, 136, 210, 0.4);
-  --tintBG-2: rgba(210, 45, 106, 0.3);
+  --tintBG-1: rgba(246, 246, 246, 0.3);
+  --tintBG-2: rgba(210, 45, 106, 0.4);
 }
 
 body {
@@ -65,7 +65,7 @@ h6 {
 
 /******* NAV SECTION *******/
 nav {
-  background-color: var(--primaryBGcolor-3);
+  background-color: var(--primaryBGcolor-4);
   display: flex;
   justify-content: center;
   position: fixed;
@@ -129,7 +129,7 @@ nav .logo {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--tintBG-1);
+  background-color: var(--tintBG-2);
   z-index: 0; /* Ensure the overlay is behind the content */
 }
 
@@ -164,8 +164,12 @@ nav .logo {
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px rgba(88, 88, 88, 0.3);
 }
+.home h2 {
+  font-weight: lighter;
+}
 .home h3 {
   font-weight: lighter;
+  text-transform: uppercase;
 }
 .home .logo {
   width: 200px;
@@ -210,6 +214,7 @@ nav .logo {
   width: 65%;
   padding: 20px 80px 30px 50px;
   min-width: 700px;
+  box-shadow: 2px 2px 4px 2px rgba(88, 88, 88, 0.2);
 }
 .captionText {
   margin-left: auto;
@@ -340,11 +345,6 @@ nav .logo {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(https://media.istockphoto.com/id/1310024666/photo/biotechnology-molecular-engineering-dna-genetic-manipulation.jpg?s=612x612&w=0&k=20&c=5a8d3LM6CZdja2RNb7_Dgr663qoBNjP_0ZZww5hKSUE=);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* bg image stays fixed as you scroll  */
-  z-index: 1;
 }
 .team::before {
   content: "";
@@ -353,46 +353,42 @@ nav .logo {
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: url(https://www.shutterstock.com/image-photo/abstract-background-hexagon-network-technology-600nw-2224647003.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* bg image stays fixed as you scroll  */
+  filter: blur(5px);
+  z-index: -1; /* Ensure the overlay is behind the content */
+}
+.team.tint {
   background-color: var(--tintBG-1);
-  z-index: 0; /* Ensure the overlay is behind the content */
 }
 .team .container {
+  padding-top: 250px;
+}
+.team .wrap_container {
   display: flex;
   flex-wrap: wrap;
   width: 1250px;
   column-gap: 30px;
   row-gap: 30px;
   padding: 0px 0px 50px 0px;
+  margin-top: 0px;
   justify-content: center;
   z-index: 1;
 }
-.team .heading.executives {
-  color: var(--fontColor-4);
-  margin-top: 250px;
-}
-.team .heading.advisors {
-  color: var(--fontColor-4);
-  margin-top: 20px;
-}
-.team h3 {
-  margin: 10px 0;
-}
-.team h2 {
+
+.team .heading {
+  padding: 0px 0px 20px 0px;
+  font-size: 20px;
   font-weight: lighter;
-}
-.team h6 {
-  margin: 5px 0;
-  text-transform: uppercase;
-}
-.team p {
-  line-height: 21px;
+  color: var(--fontColor-4);
 }
 
 .team .captionBar {
-  top: 100px;
+  top: 130px;
   left: 0px;
-  width: 50%;
-  border-radius: 0 80px 80px 0;
+  width: 40%;
   padding: 10px 50px 10px 50px;
   min-width: 400px;
 }
@@ -420,7 +416,7 @@ nav .logo {
   right: 0;
 }
 .bioCard:hover > .bioCard-bg {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--tintBG-1);
 }
 .bioCard .photo {
   border: 1px solid var(--primaryBGcolor-2);
@@ -434,7 +430,7 @@ nav .logo {
   width: 100%;
   padding: 15px;
   margin-left: -10px;
-  color: var(--fontColor-pop-3);
+  color: var(--fontColor-3);
   text-decoration: none;
   font-size: 12px;
   position: absolute;

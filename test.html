@@ -2,16 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Parallax Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburger Menu Example (CSS-only)</title>
     <link rel="stylesheet" href="test.css" />
   </head>
   <body>
-    <div class="parallax-container">
-      <div class="parallax-content">
-        <!-- Your content goes here -->
-        <h1>Parallax Effect</h1>
-        <p>Scroll down to see the parallax effect in action!</p>
-      </div>
-    </div>
+    <input type="checkbox" id="menuToggle" class="menu-toggle" />
+    <label for="menuToggle" class="menu-icon"></label>
+    <nav class="mobile-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Your main content here -->
+      <p>This is the main content.dd</p>
+    </main>
   </body>
 </html>
