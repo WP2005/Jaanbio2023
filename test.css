@@ -1,59 +1,58 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
+  font-size: 1rem; /* Use rem if preferred: font-size: 1rem; */
+  line-height: 1.5; /* Adjust line height for readability */
 }
 
-/* Hide the checkbox */
-.menu-toggle {
-  display: none;
+/* Heading sizes */
+h1 {
+  font-size: 1rem; /* Adjust as needed for the largest heading */
+  font-weight: normal;
+  /* font-size: 40px; for a fixed size */
 }
 
-/* Hamburger icon design */
-.menu-icon {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background: url("https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg")
-    no-repeat center;
-  cursor: pointer;
+h2 {
+  font-size: 2rem; /* Slightly smaller than h1 */
+  /* font-size: 32px; for a fixed size */
 }
 
-/* Styling for the mobile menu */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #333;
-  color: #fff;
-  width: 180px;
-  padding: 60px 0 0; /* Consider the height of the header */
-  z-index: 999;
+h3 {
+  font-size: 1.75rem; /* Smaller than h2 */
+  /* font-size: 28px; for a fixed size */
 }
 
-/* When the checkbox is checked, show the menu */
-.menu-toggle:checked + .menu-icon + .mobile-menu {
-  display: block;
+h4 {
+  font-size: 1.5rem; /* Smaller than h3 */
+  /* font-size: 24px; for a fixed size */
 }
 
-/* Styling for the menu items */
-.mobile-menu ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 0; /* Add margin-top to separate menu from the header */
+h5 {
+  font-size: 1.25rem; /* Smallest among the headings */
+  /* font-size: 20px; for a fixed size */
 }
 
-.mobile-menu li {
-  padding: 8px 0;
+.box-1 {
+  border: 1px pink solid;
+  background-color: rgb(205, 199, 199);
+  width: 500px;
+  padding: 1rem;
+  position: relative;
+}
+.box-2 {
+  border: 1px rgb(78, 35, 177) solid;
+  background-color: rgb(199, 199, 205);
+  width: 90%;
+  padding: 1rem;
+}
+.box-3 {
+  border: 1px rgb(78, 35, 177) solid;
+  background-color: rgb(199, 199, 205);
+  width: 80%;
+  padding: 1rem;
 }
 
-.mobile-menu a {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  padding: 8px 15px;
-}
-
-main {
-  padding: 60px 20px 20px;
+.readme {
+  border: 1px green solid;
+  background-color: rgb(71, 152, 84);
+  padding: 1rem;
+  margin-top: 50px;
 }
