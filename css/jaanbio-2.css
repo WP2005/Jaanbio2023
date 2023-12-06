@@ -7,8 +7,8 @@
 
 :root {
   --primaryBGcolor-1: rgb(255, 255, 255);
-  --primaryBGcolor-2: rgb(105, 110, 149);
-  --primaryBGcolor-3: rgba(57, 64, 85, 0.5);
+  --primaryBGcolor-2: rgb(131, 133, 154);
+  --primaryBGcolor-3: rgb(57, 64, 85);
   --primaryBGcolor-4: rgb(0, 0, 0);
 
   --primaryBGcolor-pop-1: rgb(169, 32, 84);
@@ -25,8 +25,8 @@
 
   --captionbarBG: linear-gradient(
     200deg,
-    rgba(55, 64, 123, 0.3) 5%,
-    rgba(57, 166, 225, 0.3) 45%,
+    rgba(55, 64, 123, 0.7) 15%,
+    rgba(57, 166, 225, 0.5) 45%,
     rgba(0, 0, 0, 0.2) 70%
   );
 
@@ -58,9 +58,16 @@ h5 {
 h6 {
   font-size: 0.75rem;
 }
-
 .container {
   width: 1200px;
+}
+.logo {
+  width: 300px; /* Set width for demonstration */
+  height: 80px; /* Set height for demonstration */
+  background-image: url("/images/jaanbio-logo.png"); /* Replace 'path_to_your_image.jpg' with your image file path */
+  background-size: contain; /* Ensure entire image fits within the container */
+  background-position: center; /* Center the image within the container */
+  background-repeat: no-repeat; /* Prevent image from repeating */
 }
 
 /******* NAV SECTION *******/
@@ -72,7 +79,6 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10px 10px 10px;
   z-index: 100;
 }
 nav .container {
@@ -97,11 +103,8 @@ nav a:hover {
 }
 nav li {
   list-style: none;
-  margin: 15px;
-}
-
-nav .logo {
-  width: 200px;
+  margin-top: 10px;
+  margin-right: 25px;
 }
 
 /******* END NAV SECTION *******/
@@ -112,7 +115,7 @@ nav .logo {
   padding: 5px 12px 5px 12px;
   margin-top: 10px;
   border: 1px rgb(102, 96, 96) solid;
-  background: var(--primaryBGcolor-3);
+  background: var(--primaryBGcolor-2);
   border-radius: 4px;
   color: var(--fontColor-4);
   font-size: 0.8rem;
@@ -136,9 +139,9 @@ nav .logo {
 }
 .hero-bg {
   position: relative;
-  margin-top: 90px;
+  margin-top: 0px;
   width: 100%;
-  height: 450px;
+  height: 550px;
   background-image: url(https://st3.depositphotos.com/4314643/13004/i/450/depositphotos_130040676-stock-photo-3d-illustration-of-molecule-model.jpg);
   background-size: cover;
   background-position: center;
@@ -201,30 +204,42 @@ nav .logo {
   position: absolute;
   display: flex;
   justify-content: flex-end;
-  top: 250px;
+  top: 170px;
   left: 0px;
   background-image: var(--captionbarBG);
   color: var(--fontColor-4);
-  border-radius: 0 80px 80px 0;
-  width: 65%;
-  padding: 20px 80px 30px 50px;
+  border-radius: 0 110px 110px 0;
+  width: 60%;
+  padding: 30px 100px 40px 50px;
   min-width: 700px;
   box-shadow: 2px 2px 4px 2px rgba(88, 88, 88, 0.2);
 }
+
 .captionText {
   margin-left: auto;
 }
-.captionBar .logo {
-  width: 100px;
-  margin-left: auto;
+.captionText .logo {
+  width: 250px;
+  height: 80px;
+  padding: 0;
+  margin-bottom: -5px;
+  border: #f0529f px solid;
 }
+
 .captionBar h1 {
   font-weight: lighter;
 }
 .captionBar h2 {
   font-weight: lighter;
 }
+.captionBar h3 {
+  font-weight: lighter;
+}
 .captionBar h4 {
+  font-weight: lighter;
+  color: var(--fontColor-4);
+}
+.captionBar h5 {
   font-weight: lighter;
   color: var(--fontColor-4);
 }
@@ -277,38 +292,32 @@ nav .logo {
   left: 0;
   right: 0;
 }
+.modal-header {
+  display: flex;
+  margin: 0rem -3rem 2rem -3rem;
+}
 .modal-close {
-  position: relative;
   cursor: pointer;
-  color: lightgray;
+  color: var(--fontColor-3);
+  text-align: right;
 }
 .modal-close:hover {
   color: red;
 }
+.modal-close::before {
+  content: "";
+  display: block;
+  border-top: 1px solid var(--fontColor-3);
+}
 .modal-footer {
   text-align: right;
-  margin-top: 3em;
-}
-.modal-header {
-  text-align: right;
-  margin-bottom: 2em;
-}
-.modal-header::after {
-  content: "";
-  display: block;
-  border-top: 1px solid rgb(138, 151, 236); /* Change the color, width, and style as needed */
-  margin: 10px 0; /* Adjust the margin to position the line as desired */
-}
-.modal-footer::before {
-  content: "";
-  display: block;
-  border-top: 1px solid rgb(138, 151, 236); /* Change the color, width, and style as needed */
-  margin: 10px 0; /* Adjust the margin to position the line as desired */
+  margin-top: 2rem;
 }
 
 /******** Modal Problem Popup ********/
 .topicExcerpt {
   position: relative;
+  font-size: 0.8rem;
 }
 
 /********** Team **********/
@@ -417,18 +426,18 @@ nav .logo {
 /**** Publications ***/
 
 .publications {
-  background-color: rgb(39, 39, 47);
+  background-color: var(--primaryBGcolor-3);
   display: flex;
   position: relative;
   justify-content: center;
   width: 100%;
-  padding-top: 300px;
+  padding-top: 250px;
   padding-bottom: 100px;
 }
 .publications .container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 4rem;
+  column-gap: 2rem;
   row-gap: 5rem;
   justify-content: center;
   width: 80%;
@@ -441,43 +450,93 @@ nav .logo {
   padding: 10px 50px 10px 50px;
   min-width: 400px;
 }
-.publications .newsCard {
+.newsCard {
   background-color: var(--primaryBGcolor-1);
   max-width: 400px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 5px 5px 1rem var(--primaryBGcolor-5);
   position: relative;
-  padding: 1.5rem 1rem 2rem 2rem;
+  padding: 1.5rem 2rem 3rem 2rem;
 }
-.publications .date {
+.newsCard .read-more {
+  background-color: var(--primaryBGcolor-2);
+  width: 100%;
+  padding: 10px 10px 10px 2rem;
+  margin-left: -2rem;
+  color: var(--fontColor-4);
+  text-decoration: none;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0px;
+  font-style: italic;
+}
+.newsCard .read-more:hover {
+  background-color: var(--primaryBGcolor-4);
+}
+.newsCard .header {
   display: flex;
-  align-items: center;
-  margin: 0 0 0.5rem 0;
+  align-items: flex-start;
+  margin: 0 0 0.8rem 0;
   color: var(--fontColor-1);
   font-size: 0.8rem;
   text-align: left;
 }
-.publications .newsIcon {
+.newsCard .newsIcon {
   font-size: 30px;
-  padding-right: 5px;
+  margin-right: 5px;
+  margin-top: 4px;
   color: var(--fontColor-pop-1);
 }
-.publications h3 {
+.modal .newsIcon {
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--fontColor-pop-1);
+}
+.newsCard .infoIcon {
+  font-size: 30px;
+  margin-right: 5px;
+  margin-top: 4px;
+  color: var(--fontColor-pop-2);
+}
+.modal .infoIcon {
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--fontColor-pop-2);
+}
+.newsCard .newsType {
   font-weight: lighter;
 }
-.publications h4 {
+.modal .newsType {
+  font-weight: lighter;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.newsCard .date {
+  color: var(--fontColor-1);
+  font-weight: lighter;
+}
+.modal .date {
+  color: var(--fontColor-1);
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
+.newsCard h3 {
+  font-weight: lighter;
+}
+.newsCard h4 {
   margin-top: 1rem;
   font-weight: lighter;
 }
-.publications h5 {
+.newsCard h5 {
   margin-top: 0.5rem;
 }
-.publications h6 {
+.newsCard h6 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-weight: lighter;
 }
-.publications ul {
+.newsCard ul {
   margin-left: 1rem;
   margin-top: 1rem;
 }
