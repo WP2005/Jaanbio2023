@@ -1,58 +1,14 @@
-body {
-  font-size: 1rem; /* Use rem if preferred: font-size: 1rem; */
-  line-height: 1.5; /* Adjust line height for readability */
+/* Set initial visibility of the div */
+#myDiv {
+  display: block;
 }
 
-/* Heading sizes */
-h1 {
-  font-size: 1rem; /* Adjust as needed for the largest heading */
-  font-weight: normal;
-  /* font-size: 40px; for a fixed size */
+/* Set the target state when a hash fragment is added to the URL */
+#myDiv:target {
+  display: none;
 }
 
-h2 {
-  font-size: 2rem; /* Slightly smaller than h1 */
-  /* font-size: 32px; for a fixed size */
-}
-
-h3 {
-  font-size: 1.75rem; /* Smaller than h2 */
-  /* font-size: 28px; for a fixed size */
-}
-
-h4 {
-  font-size: 1.5rem; /* Smaller than h3 */
-  /* font-size: 24px; for a fixed size */
-}
-
-h5 {
-  font-size: 1.25rem; /* Smallest among the headings */
-  /* font-size: 20px; for a fixed size */
-}
-
-.box-1 {
-  border: 1px pink solid;
-  background-color: rgb(205, 199, 199);
-  width: 500px;
-  padding: 1rem;
-  position: relative;
-}
-.box-2 {
-  border: 1px rgb(78, 35, 177) solid;
-  background-color: rgb(199, 199, 205);
-  width: 90%;
-  padding: 1rem;
-}
-.box-3 {
-  border: 1px rgb(78, 35, 177) solid;
-  background-color: rgb(199, 199, 205);
-  width: 80%;
-  padding: 1rem;
-}
-
-.readme {
-  border: 1px green solid;
-  background-color: rgb(71, 152, 84);
-  padding: 1rem;
-  margin-top: 50px;
+/* Apply smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
 }
